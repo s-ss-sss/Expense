@@ -4,6 +4,9 @@
 # Logs
 applogs/
 
+# Notes
+.info.md
+
 # IDE
 .idea/
 
