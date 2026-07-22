@@ -10,25 +10,25 @@
 					「確認画面へ」をクリックしてください
 				</p>
 			</div>
-			
+
 			{* 全体エラー *}
 			{if $warning}
 				{foreach from=$warning item=msg}
 					<p class="error-text u-mb-8">{$msg}</p>
 				{/foreach}
 			{/if}
-			
+
 			<form action="/expense/admin/mail/edit/{$form_data.mail_id}/" method="POST">
-				
+
 				{* 画面遷移 *}
 				<input type="hidden" name="state" value="confirm">
-				
+
 				{* CSRFトークン *}
 				<input type="hidden" name="csrf_token" value="{$csrf_token}">
-				
+
 				{* メールID *}
 				<input type="hidden" name="mail_id" value="{$form_data.mail_id}">
-				
+
 				<div class="form-block__group">
 					<div class="form-block__field">
 						<label class="form-block__label">メールアドレス</label>
@@ -45,7 +45,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				{* ボタン群 *}
 				<div class="button__wrap u-mt-24">
 					<a href="/expense/admin/mail/" class="button button--sub">戻る</a>

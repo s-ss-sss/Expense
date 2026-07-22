@@ -10,7 +10,7 @@
 					「表示する」をクリックしてください
 				</p>
 			</div>
-			
+
 			{* 期間選択フォーム *}
 			<form action="/expense/history/" method="POST" class="history__filter u-mb-16">
 				<input type="hidden" name="mode" value="history">
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 			</form>
-			
+
 			{* 対象期間表示 *}
 			<div class="history__range u-mb-24">
 				<span class="history__range-text">表示期間</span>
@@ -69,7 +69,7 @@
 					<span class="history__range-end">{$period.to|default:''}</span>
 				</div>
 			</div>
-			
+
 			{* 履歴テーブル *}
 			<div class="table__wrap table__wrap--has-summary">
 				<table class="table">
@@ -94,7 +94,7 @@
 						</tr>
 					</thead>
 					<tbody class="table__tbody">
-						
+
 						{if $history.history_data|@count > 0}
 							{foreach from=$history.history_data item=row}
 								<tr class="table__tr">
@@ -112,7 +112,7 @@
 								<td class="table__td table__td--nodata" colspan="7">表示対象のデータはありません</td>
 							</tr>
 						{/if}
-						
+
 						{* 件数と合計 *}
 						<tr class="table__tr table__tr--summary">
 							<td class="table__td table__td--summary" colspan="9">
@@ -131,7 +131,7 @@
 			</div>
 		</section>
 	</main>
-	
+
 	{* プルダウンの終了月を制限 *}
 	<script type="text/javascript">
 		const MONTH_OPTIONS = {$js_month_options|@json_encode nofilter};

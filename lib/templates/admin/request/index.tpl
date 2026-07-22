@@ -206,7 +206,7 @@
 				<input type="hidden" name="to" value="{$period.to_raw}">
 				<input type="hidden" name="user_id" value="{$selected_user_id}">
 				<div class="button__wrap">
-				    <button type="submit" class="button button--main">CSVデータをダウンロードする</button>
+					<button type="submit" class="button button--main">CSVデータをダウンロードする</button>
 				</div>
 			</form>
 		</section>

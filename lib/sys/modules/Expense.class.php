@@ -116,8 +116,8 @@ class Expense extends Common {
 	 * バリデーション：購入日
 	 *
 	 * @access	public
-	 * @param   $date
-	 * @return  $errors
+	 * @param	$date
+	 * @return	$errors
 	 */
 	public function validateDate($date) {
 		$errors = [];
@@ -140,8 +140,8 @@ class Expense extends Common {
 	 * バリデーション：コース名
 	 *
 	 * @access	public
-	 * @param   $course_name
-	 * @return  $errors
+	 * @param	$course_name
+	 * @return	$errors
 	 */
 	public function validateCourseName($course_name) {
 		$errors = [];
@@ -159,8 +159,8 @@ class Expense extends Common {
 	 * フォームデータの入力項目から行数をカウント
 	 *
 	 * @access	public
-	 * @param   $form_data
-	 * @return  $max
+	 * @param	$form_data
+	 * @return	$max
 	 */
 	public function getRowCount($form_data) {
 		$max = 0;

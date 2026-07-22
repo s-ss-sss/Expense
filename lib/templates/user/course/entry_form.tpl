@@ -10,22 +10,22 @@
 					「確認画面へ」をクリックしてください
 				</p>
 			</div>
-			
+
 			{* 全体エラー *}
 			{if $warning}
 				{foreach from=$warning item=msg}
 					<p class="error-text u-mb-8">{$msg}</p>
 				{/foreach}
 			{/if}
-			
+
 			<form action="/expense/course/" method="POST">
-				
+
 				{* 画面遷移 *}
 				<input type="hidden" name="state" value="confirm">
-				
+
 				{* CSRFトークン *}
 				<input type="hidden" name="csrf_token" value="{$csrf_token}">
-				
+
 				{section name=row loop=$row_count}
 					{assign var="num" value=$smarty.section.row.index}
 					<div class="form-list__row u-mb-12" data-index="{$num + 1}">
@@ -34,21 +34,21 @@
 						</div>
 						<div class="form-list__main">
 							<div class="form-list__group">
-								
+
 								{* コース名 *}
 								<div class="form-list__field">
 									<label class="form-list__label">コース名</label>
 									<input
 										type="text"
 										name="course_name[]"
-										class="form-list__input {if isset($errors[$num].course_name)}error-form{/if}" 
+										class="form-list__input {if isset($errors[$num].course_name)}error-form{/if}"
 										value="{$form_data.course_name[$num]}"
 									>
 									{if isset($errors[$num].course_name)}
 										<p class="error-text u-mt-8">{$errors[$num].course_name}</p>
 									{/if}
 								</div>
-								
+
 								{* 路線 *}
 								<div class="form-list__field">
 									<label class="form-list__label">路線</label>
@@ -62,7 +62,7 @@
 										<p class="error-text u-mt-8">{$errors[$num].route}</p>
 									{/if}
 								</div>
-								
+
 								{* 種別 *}
 								<div class="form-list__field">
 									<label class="form-list__label">種別</label>
@@ -76,7 +76,7 @@
 										<p class="error-text u-mt-8">{$errors[$num].type}</p>
 									{/if}
 								</div>
-														
+
 								{* 区間 *}
 								<div class="form-list__field">
 									<label class="form-list__label">区間</label>
@@ -99,7 +99,7 @@
 										<p class="error-text u-mt-8">{$errors[$num].section}</p>
 									{/if}
 								</div>
-								
+
 								{* 料金 *}
 								<div class="form-list__field">
 									<label class="form-list__label">料金</label>
@@ -107,7 +107,7 @@
 										<input
 											type="text"
 											name="fee[]"
-											class="form-list__input form-list__input--number {if isset($errors[$num].fee)}error-form{/if}" 
+											class="form-list__input form-list__input--number {if isset($errors[$num].fee)}error-form{/if}"
 											value="{$form_data.fee[$num]}"
 										>
 										<span class="form-list__unit">円</span>
@@ -116,7 +116,7 @@
 										<p class="error-text u-mt-8">{$errors[$num].fee}</p>
 									{/if}
 								</div>
-		
+
 								{* 訪問先 *}
 								<div class="form-list__field">
 									<label class="form-list__label">訪問先</label>
@@ -131,7 +131,7 @@
 									{/if}
 								</div>
 							</div>
-							
+
 							{* ボタン群 *}
 							<div class="form-list__action">
 								<button type="button" class="button button--remove" aria-label="行を削除">行を削除</button>
@@ -139,18 +139,18 @@
 						</div>
 					</div>
 				{/section}
-				
+
 				{* 行を追加ボタン *}
 				<div class="form-list__add u-mb-24">
 					<button type="button" class="button button--add" aria-label="行を追加">行を追加</button>
 				</div>
-				
+
 				{* ボタン群 *}
 				<div class="button__wrap">
 					<a href="/expense/course/" class="button button--sub">戻る</a>
 					<button type="button" class="button button--sub js-clear-form">内容をクリア</button>
-			    	<button type="submit" class="button button--main">確認画面へ</button>
-			    </div>
+					<button type="submit" class="button button--main">確認画面へ</button>
+				</div>
 			</form>
 		</section>
 	</main>

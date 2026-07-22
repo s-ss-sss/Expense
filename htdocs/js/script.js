@@ -31,11 +31,11 @@ $(function() {
 
 		// data属性から値を取得
 		const route	= $(this).data('route_id');
-		const type 	= $(this).data('type_id');
-		const from 	= $(this).data('section_from');
-		const to   	= $(this).data('section_to');
-		const fee  	= $(this).data('fee');
-		const note 	= $(this).data('note');
+		const type	= $(this).data('type_id');
+		const from	= $(this).data('section_from');
+		const to	= $(this).data('section_to');
+		const fee	= $(this).data('fee');
+		const note	= $(this).data('note');
 
 		// 対象行に値をセット
 		row.find('select[name="route[]"]').val(route);
@@ -61,8 +61,8 @@ $(function() {
 	// ==============================
 	$(document).on('click', '.js-clear-form', function(e) {
 
-	    // フォーム送信を防止
-	    e.preventDefault();
+		// フォーム送信を防止
+		e.preventDefault();
 
 		// form要素を取得
 		const $form = $(this).closest('form');

@@ -67,8 +67,8 @@ class ExpenseDao extends CommonDao {
 	 * よく使うコースの全件取得
 	 *
 	 * @access	public
-	 * @param   $user_id
-	 * @return  array
+	 * @param	$user_id
+	 * @return	array
 	 */
 	public function getCourses($user_id) {
 

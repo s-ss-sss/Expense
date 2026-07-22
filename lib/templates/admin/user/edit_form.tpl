@@ -137,8 +137,8 @@
 				{* ボタン群 *}
 				<div class="button__wrap u-mt-24">
 					<a href="/expense/admin/user/" class="button button--sub">戻る</a>
-			    	<button type="submit" class="button button--main">確認画面へ</button>
-			    </div>
+					<button type="submit" class="button button--main">確認画面へ</button>
+				</div>
 			</form>
 		</section>
 	</main>

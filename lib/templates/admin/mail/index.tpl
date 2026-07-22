@@ -3,7 +3,7 @@
 {block name=content}
 	<main class="u-mb-32">
 		<section>
-			
+
 			{if ! empty($mails)}
 				<div class="heading u-mb-24">
 					<h2 class="heading__title u-mb-16">メール宛先管理</h2>
@@ -12,22 +12,22 @@
 						「削除する」をクリックしてください
 					</p>
 				</div>
-				
+
 				{* 全体エラー *}
 				{if $warning}
 					{foreach from=$warning item=msg}
 						<p class="error-text u-mb-8">{$msg}</p>
 					{/foreach}
 				{/if}
-				
+
 				<form action="/expense/admin/mail/" method="POST">
-					
+
 					{* 削除 *}
 					<input type="hidden" name="state" value="delete">
-					
+
 					{* CSRFトークン *}
 					<input type="hidden" name="csrf_token" value="{$csrf_token}">
-					
+
 					{* メールテーブル *}
 					<div class="table__wrap u-mb-24">
 						<table class="table">
@@ -60,7 +60,7 @@
 							</tbody>
 						</table>
 					</div>
-					
+
 					{* ボタン群 *}
 					<div class="button__wrap">
 						<button type="submit" class="button button--red js-delete-button">削除する</button>
@@ -74,12 +74,12 @@
 					<button type="button" class="button button--main js-entry-button">新規登録する</button>
 			    </div>
 			{/if}
-			
+
 			{* 並び替え *}
 			<form action="/expense/admin/mail/" method="POST" class="js-sort-form" style="display: none;">
 				<input type="hidden" name="state" value="sort">
 			</form>
-			
+
 			{* 登録 *}
 			<form action="/expense/admin/mail/" method="POST" class="js-entry-form" style="display: none;">
 				<input type="hidden" name="state" value="form">

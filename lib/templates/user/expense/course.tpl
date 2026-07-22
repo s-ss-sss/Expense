@@ -128,8 +128,8 @@
 				{* ボタン群 *}
 				<div class="button__wrap u-mt-24">
 					<a href="/expense/" class="button button--sub">登録しない</a>
-			    	<button type="submit" class="button button--main">登録する</button>
-			    </div>
+					<button type="submit" class="button button--main">登録する</button>
+				</div>
 			</form>
 		</section>
 	</main>

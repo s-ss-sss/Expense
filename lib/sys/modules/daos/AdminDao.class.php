@@ -241,7 +241,7 @@ class AdminDao extends CommonDao {
 	 *
 	 * @access	public
 	 * @param
-	 * @return  array
+	 * @return	array
 	 */
 	public function getRequestCsv($from = null, $to = null, $user_id = null) {
 
@@ -1504,7 +1504,7 @@ class AdminDao extends CommonDao {
 	 * 並び替え順の更新の実行
 	 *
 	 * @access	public
-	 * @param   $sort_ids
+	 * @param	$sort_ids
 	 * @return
 	 */
 	private function _changeTypeSortOrders($sort_ids) {

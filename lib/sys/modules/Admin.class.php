@@ -152,8 +152,8 @@ class Admin extends Common {
 			'js_month_options'		=> $js_month_options,
 			'period_data'			=> $period_info,
 			'period'				=> $period,
-			'requests'  			=> $request_summary,
-			'all_users' 			=> $all_users,
+			'requests'				=> $request_summary,
+			'all_users'				=> $all_users,
 			'selected_user_id'		=> $selected_user_id,
 			'is_all_selected'		=> $is_all_selected,
 			'section'				=> 'request'
@@ -481,7 +481,7 @@ class Admin extends Common {
 			'section'		=> 'request'
 		]);
 
-    	$smarty->display('admin/request/form.tpl');
+		$smarty->display('admin/request/form.tpl');
 	}
 
 	/**
@@ -627,8 +627,8 @@ class Admin extends Common {
 	 * CSVデータ整形
 	 *
 	 * @access	private
-	 * @param   $expenses
-	 * @return  implode("\r\n", $lines)
+	 * @param	$expenses
+	 * @return	implode("\r\n", $lines)
 	 */
 	private function _buildRequestCsv($expenses) {
 
@@ -640,8 +640,8 @@ class Admin extends Common {
 		$total_fee			= 0;
 
 		// ラベル用変数
-		$routes = $this->getLabels()['routes'] ?? [];
-		$types  = $this->getLabels()['types']  ?? [];
+		$routes	= $this->getLabels()['routes'] ?? [];
+		$types	= $this->getLabels()['types'] ?? [];
 
 		// クロージャ：1行のデータ出力用
 		$push = function ($line) {

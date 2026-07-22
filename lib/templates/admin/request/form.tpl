@@ -11,25 +11,25 @@
 					「実行する」をクリックしてください
 				</p>
 			</div>
-			
+
 			{* 全体エラー *}
 			{if $warning}
 				{foreach from=$warning item=msg}
 					<p class="error-text u-mb-8">{$msg}</p>
 				{/foreach}
 			{/if}
-			
+
 			<form action="/expense/admin/request/cancel/{$request.id}/" method="POST">
-				
+
 				{* 画面遷移 *}
 				<input type="hidden" name="state" value="complete">
-				
+
 				{* CSRFトークン *}
 				<input type="hidden" name="csrf_token" value="{$csrf_token}">
-				
+
 				{* 請求データID *}
 				<input type="hidden" name="request_id" value="{$request.id}">
-				
+
 				<dl class="form-block__group u-mb-12">
 					<div class="form-block__field">
 						<dt class="form-block__label">請求日</dt>
@@ -89,7 +89,7 @@
 						</dd>
 					</div>
 				</dl>
-				
+
 				{* 取消理由 *}
 				<div class="form-block__group">
 					<div class="form-block__field">
@@ -104,17 +104,17 @@
 						</div>
 					</div>
 				</div>
-				
+
 				{* エラー *}
 				{if isset($errors.cancel_reason)}
 					<p class="error-text u-mt-8">{$errors.cancel_reason}</p>
 				{/if}
-				
+
 				{* ボタン群 *}
 				<div class="button__wrap u-mt-24">
 					<a href="/expense/admin/request/" class="button button--sub">戻る</a>
-			    	<button type="submit" class="button button--main">実行する</button>
-			    </div>
+					<button type="submit" class="button button--main">実行する</button>
+				</div>
 			</form>
 		</section>
 	</main>

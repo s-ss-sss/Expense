@@ -182,11 +182,11 @@ input[type="checkbox"]:checked::before {
 	padding-right: 1rem;
 }
 
-.u-mb-4  {
+.u-mb-4 {
 	margin-bottom: var(--space-4);
 }
 
-.u-mb-8  {
+.u-mb-8 {
 	margin-bottom: var(--space-8);
 }
 

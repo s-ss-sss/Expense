@@ -75,8 +75,8 @@
 				{* ボタン群 *}
 				<div class="button__wrap u-mt-24">
 					<button type="button" class="button button--sub js-entry-button">戻る</button>
-			    	<button type="submit" class="button button--main">登録する</button>
-			    </div>
+					<button type="submit" class="button button--main">登録する</button>
+				</div>
 			</form>
 
 			{* 戻る *}

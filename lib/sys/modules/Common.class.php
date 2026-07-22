@@ -258,8 +258,8 @@ class Common {
 	public function getLabels() {
 
 		// 路線と種別データの取得
-		$routes_raw = $this->dao->getRoutes();
-		$types_raw  = $this->dao->getTypes();
+		$routes_raw	= $this->dao->getRoutes();
+		$types_raw	= $this->dao->getTypes();
 
 		// id => name形式に変換
 		$routes	= array_column($routes_raw, 'route_name', 'id');
